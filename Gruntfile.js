@@ -4,6 +4,25 @@ module.exports = function(grunt) {
 
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
+        mochacov: {
+            options: {
+                require: ['chai']
+            },
+            cov: {
+                options:{
+                    reporter: 'html-cov',
+                    output: 'dist/reports/cov.html',
+                    files: ['test/**/*.js']
+                }
+            },
+            test: {
+                options:{
+                    reporter: 'spec',
+                    output: 'dist/reports/test.html',
+                    files: ['test/**/*.js']
+                }
+            }
+        },
         yuidoc: {
             compile: {
                 name: '<%= pkg.name %>',
@@ -55,8 +74,10 @@ module.exports = function(grunt) {
 
     grunt.registerTask('lint', ['jshint', 'jscs']);
 
+    grunt.registerTask('test', ['mochacov:cov', 'mochacov:test']);
+
     // Short list as a high frequency watch task
-    grunt.registerTask('dev', ['lint']);
+    grunt.registerTask('dev', ['lint', 'test']);
 
     grunt.registerTask('doc', ['yuidoc:compile']);
 
