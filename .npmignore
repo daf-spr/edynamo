@@ -1,0 +1,12 @@
+.jshintignore
+.jshintrc
+
+/.editorconfig
+/.gitattributes
+/.jscs.json
+
+/build
+/test
+/Gruntfile.js
+
+/node_modules
