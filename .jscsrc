@@ -1,5 +1,12 @@
 {
     "preset": "google",
     "validateIndentation": 4,
+    
+    "requireParenthesesAroundIIFE": true,
+    "maximumLineLength": 120,
+
+    "disallowKeywords": ["with"],
+    "disallowSpacesInsideObjectBrackets": null,
+
     "excludeFiles": [ "node_modules" ]
 }

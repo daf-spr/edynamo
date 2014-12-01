@@ -1,4 +1,4 @@
-dynamite
+eDynamo
 ========
 
 DynamoDB Client for NodeJS

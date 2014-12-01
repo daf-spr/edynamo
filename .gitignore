@@ -5,6 +5,7 @@
 *.patch
 .DS_Store
 *.log
+.out 
 
 /dist
 /node_modules

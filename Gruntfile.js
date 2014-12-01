@@ -12,14 +12,14 @@ module.exports = function(grunt) {
                 options:{
                     reporter: 'html-cov',
                     output: 'dist/reports/cov.html',
-                    files: ['test/**/*.js']
+                    files: ['test/spec/**/*.js']
                 }
             },
             test: {
                 options:{
                     reporter: 'spec',
                     output: 'dist/reports/test.html',
-                    files: ['test/**/*.js']
+                    files: ['test/spec/**/*.js']
                 }
             }
         },
