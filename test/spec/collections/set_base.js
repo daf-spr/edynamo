@@ -76,10 +76,11 @@ describe('Collections', function() {
 
                 should.Throw(function() {
                     set.addAll(['a', 'b', 1, 'c']);
-                    set.items.should.not.include('a');
-                    set.items.should.not.include('b');
-                    set.items.should.not.include('c');
                 });
+
+                set.items.should.not.include('a');
+                set.items.should.not.include('b');
+                set.items.should.not.include('c');
             });
 
         });
