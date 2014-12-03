@@ -61,7 +61,7 @@ module.exports = function(grunt) {
         watch: {
             default:{
                 files: ['<%= jshint.all.src %>'],
-                tasks: ['lint', 'yuidoc'],
+                tasks: ['lint', 'test'],
                 options: {
                     debounceDelay: 5000
                 }
