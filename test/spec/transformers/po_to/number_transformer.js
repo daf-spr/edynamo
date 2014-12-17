@@ -12,10 +12,10 @@ describe('Transformers', function() {
 
             describe('transform()', function() {
 
-                it('Should transform an untyped number value to a typed number value', function() {
+                it('Should transform an untyped number value to a typed number value (number expresed as string)', function() {
                     var st = new NumberTransformer();
 
-                    st.transform(1).should.eql({ N: 1 });
+                    st.transform(1).should.eql({ N: '1' });
                 });
 
                 it('Should throw an exception if value is a string', function() {
