@@ -16,7 +16,7 @@ describe('Transformers', function() {
 
                 it('Should transform an untyped string set value to a typed string set value', function() {
                     var st = new StringSetTransformer();
-                    var ns = new StringSet([ 't1', 't2' ]);
+                    var ns = new StringSet(['t1', 't2']);
 
                     st.transform(ns).should.eql({ SS: ns.items });
                 });
@@ -65,7 +65,7 @@ describe('Transformers', function() {
                     var st = new StringSetTransformer();
 
                     should.Throw(function() {
-                        st.transform(new BinarySet());
+                        st.transform(new NumericSet());
                     });
                 });
 
@@ -75,7 +75,7 @@ describe('Transformers', function() {
 
                 it('Should return true for StringSets', function() {
                     var st = new StringSetTransformer();
-                    var ns = new StringSet([ 't1', 't2' ]);
+                    var ns = new StringSet(['t1', 't2']);
 
                     st.isApplicable(ns).should.be.true;
                 });

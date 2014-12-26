@@ -28,7 +28,7 @@ describe('Collections', function() {
             it('Should accept binary values', function() {
                 var bs = new BinarySet();
                 var value = new Buffer('test');
-                
+
                 bs.add(value);
                 bs.items.should.contain(value);
             });

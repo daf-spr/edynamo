@@ -14,7 +14,7 @@ describe('Transformers', function() {
             });
 
             describe('construct()', function() {
-                
+
                 it('Should exist', function() {
                     should.exist(BooleanTransformer);
                     BooleanTransformer.should.be.a.function;
@@ -84,7 +84,7 @@ describe('Transformers', function() {
             });
 
             describe('isApplicable()', function() {
-                
+
                 it('Should return true for a boolean', function() {
                     this.transformer.isApplicable(true).should.be.true;
                     this.transformer.isApplicable(false).should.be.true;

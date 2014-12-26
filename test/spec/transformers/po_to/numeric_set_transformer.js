@@ -16,9 +16,9 @@ describe('Transformers', function() {
 
                 it('Should transform an untyped numeric set value to a typed numeric set value', function() {
                     var st = new NumericSetTransformer();
-                    var ns = new NumericSet([ 1, 2 ]);
+                    var ns = new NumericSet([1, 2]);
 
-                    st.transform(ns).should.eql({ NS: ns.items });
+                    st.transform(ns).should.eql({ NS: ['1', '2'] });
                 });
 
                 it('Should throw an exception if value is a string', function() {

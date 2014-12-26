@@ -16,7 +16,7 @@ describe('Transformers', function() {
 
                 it('Should transform an untyped binary set value to a typed binary set value', function() {
                     var st = new BinarySetTransformer();
-                    var bs = new BinarySet([ new Buffer('Test', 'utf8') ]);
+                    var bs = new BinarySet([new Buffer('Test', 'utf8')]);
 
                     st.transform(bs).should.eql({ BS: bs.items });
                 });
@@ -76,7 +76,7 @@ describe('Transformers', function() {
                 it('Should return true for BinarySets', function() {
                     var st = new BinarySetTransformer();
 
-                    var bs = new BinarySet([ new Buffer('Test', 'utf8') ]);
+                    var bs = new BinarySet([new Buffer('Test', 'utf8')]);
 
                     st.isApplicable(bs).should.be.true;
                 });
