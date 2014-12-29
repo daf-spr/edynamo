@@ -7,7 +7,7 @@ var should = chai.should();
 
 describe('Transformers', function() {
     describe('PlainObject to TypedObject', function() {
-        describe('Boolean', function() {
+        describe('BooleanTransformer', function() {
 
             beforeEach(function() {
                 this.transformer = new BooleanTransformer();
